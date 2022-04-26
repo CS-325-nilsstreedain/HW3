@@ -46,7 +46,7 @@ Maximum number of activities = 2
 
 In the write up submitted in Canvas include a description of your algorithm, pseudocode and analysis of the theoretical running time.  You do not need to collected experimental running times.
 
-In TEACH submit a .zip file containing:
+In [TEACH](https://teach.engr.oregonstate.edu/teach.php?type=assignment) submit a .zip file containing:
  activity.**
  act.txt
  solution.txt
