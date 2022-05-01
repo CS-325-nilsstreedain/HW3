@@ -38,20 +38,20 @@ int main(int argc, const char * argv[]) {
 		}
 		
 		// Deque to store activity selection last to start final results
-		std::deque<std::vector<int>> finals;
+		std::vector<std::vector<int>> finals;
 		
 		// Loop over each activity
 		while (activities.size() > 0) {
 			// Move activity to deque
-			finals.push_back(activities.top());
+			std::vector<int> temp = activities.top();
 			activities.pop();
-			
+
 			// Remove from deque if not compatible
-			int size = (int)finals.size() - 1;
-			if (size > 0 && finals[size][2] > finals[size - 1][1])
-				finals.pop_back();
+			int size = (int)finals.size();
+			if (size < 1 || temp[2] <= finals[size - 1][1])
+				finals.push_back(temp);
 		}
-		
+
 		// Print final results
 		printf("Set %i\nMaximum number of activities = %i\n",
 			   set, (int)finals.size());
